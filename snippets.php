@@ -1,7 +1,7 @@
 
 
 // Execute code based on post ID
-<?php  is_single('17') { ?>
+<?php  if (is_single('17')) { ?>
 
    <!-- do your stuff here -->
 
