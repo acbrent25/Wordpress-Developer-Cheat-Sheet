@@ -52,3 +52,18 @@ function wpb_change_title_text( $title ){
   
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
+// Woocommerce: Exclude states etc. from shipping
+
+// Do not ship to Porto Rico (PR) Woo 2.1+ and other places
+ 
+function only_ship_to_conus( $rates, $package ) {
+global $woocommerce;
+$excluded_states = array( 'PR','AK','HI','AA','AE','AP','AS','GU','MP','UM','VI' );
+if( in_array( WC()->customer->shipping_state, $excluded_states ) ) {
+    $rates = array();
+}
+return $rates;
+}
+ 
+add_filter( 'woocommerce_package_rates', 'only_ship_to_conus', 10, 2 );
+
