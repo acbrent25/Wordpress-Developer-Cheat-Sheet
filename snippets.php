@@ -67,3 +67,27 @@ return $rates;
  
 add_filter( 'woocommerce_package_rates', 'only_ship_to_conus', 10, 2 );
 
+// Verticle Align Logo row with Bootstrap 4
+<div class="section" id="logo-row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 offset-md-1 h-100 my-auto text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-henkel.jpg" alt="henkel logo" width="140" height="96">
+			</div>
+			<div class="col-md-2 h-100 my-auto text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-huhtamaki.jpg" alt="huhtamaki logo" width="252" height="96">
+			</div>
+			<div class="col-md-2 h-100 my-auto text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-oracle.jpg" alt="oracle logo" width="220" height="96">
+			</div>
+			<div class="col-md-2 h-100 my-auto text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-amazon.jpg" alt="amazon logo" width="168" height="96">
+			</div>
+			<div class="col-md-2 h-100 my-auto text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-international-paper.jpg" alt="international paper logo" width="379" height="96">
+			</div>
+		</div>
+	</div>
+</div>
+
+
