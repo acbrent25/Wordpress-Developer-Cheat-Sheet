@@ -90,6 +90,7 @@ add_filter( 'woocommerce_package_rates', 'only_ship_to_conus', 10, 2 );
 	</div>
 </div>
 
+// Loop through tags
 <select class="form-control" id="tag-sort">
  <?php $tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
  	foreach ( (array) $tags as $tag ) {
